@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background gradient animation */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #ff6b6b, #f8e71c, #4ecdc4, #556270);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Center container */
+    .container {
+      text-align: center;
+    }
+
+    /* Animated "Coming Soon" text */
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+      animation: fadeInOut 2s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; transform: translateY(-20px); }
+      50% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Subtext animation */
+    p {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      animation: slideUp 2s infinite;
+    }
+
+    @keyframes slideUp {
+      0%, 100% { opacity: 0; transform: translateY(20px); }
+      50% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Optional: small pulse dot */
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+      background-color: white;
+      border-radius: 50%;
+      animation: pulse 1s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Coming Soon<span class="dot"></span></h1>
+    <p>We are working hard to launch our new website!</p>
+  </div>
+</body>
+</html>
